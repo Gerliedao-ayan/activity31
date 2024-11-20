@@ -1,0 +1,109 @@
+main {
+  background-color: #8dc9ce;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(170, 59, 59, 0.1);
+  height: 100%;
+  overflow-y: auto;
+  display: grid;
+  gap: 2rem;
+  color: #bd3e3e; /* Changed text color to a darker gray */
+}
+
+.product-card {
+  border-radius: 1rem;
+  padding: 0.75rem;
+  height: auto;
+  box-shadow: 0 4px 6px rgba(209, 46, 46, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__image__container {
+  height: 12rem;
+  border-radius: 1rem;
+}
+
+.product-card__image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.product-card__details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+h1 {
+  text-align: center;
+  color: red;
+}
+.product-card__details__name {
+  font-size: 1.25rem;
+  padding: 0.5rem 0;
+  color: #9f4141; /* Changed text color to a darker gray */
+}
+
+.product-card__details__description {
+  line-height: 1.25rem;
+  flex-grow: 1;
+  color: #bf2121; /* Changed text color to a darker gray */
+}
+
+.product-card__details__price {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  color: #df2121; /* Changed text color to a darker gray */
+}
+
+.button-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.button-cart {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.25rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-cart:hover {
+  background-color: #45a049;
+}
+
+.button-buy {
+  background-color: #f44336;
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.25rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-buy:hover {
+  background-color: #d32f2f;
+}
+
+@media (max-width: 767px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
